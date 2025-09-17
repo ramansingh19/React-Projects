@@ -1,7 +1,9 @@
 import './App.css'
 import Title from './Title.jsx'
-import {Image} from './image.jsx'
-import './image.css'
+// import {Image} from './image.jsx'
+import ProductTab from './ProductTab.jsx';
+import Parent from '../Props/Parent.jsx';
+
 
 function Description() {
   return (
@@ -17,7 +19,10 @@ function App() {
     <>
       <Title />
       <Description />
-      <Image/>
+      {/* <Image/> */}
+      <ProductTab/>
+      <Parent/>
+      
     </>
   );
 }
