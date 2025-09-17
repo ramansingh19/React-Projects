@@ -40,3 +40,22 @@
 .read-the-docs {
   color: #888;
 }
+
+.Image {
+  background-color: bisque;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.Image img {
+  width: 400px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.Image:hover img {
+  transform: scale(1.2); 
+  cursor: pointer;
+}
