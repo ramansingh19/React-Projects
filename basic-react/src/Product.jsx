@@ -1,22 +1,48 @@
+// Product.jsx
 import './Product.css';
 
-// function Products(props){
-//   console.dir(props);
-  
-// }
+function Product({ title , price = 1, }) {
+//let isDiscount = price > 30000  && price < 50000 ? 'Discount of 5%' : "" ;
 
-function Product({ title = 'Enter Product name ' , price = 1 , feature ,  feature2 , feature3 }  ) {
-  console.log(title);
-  
+// isDiscount = price > 50000 ? 'Discount of 10%' : isDiscount;
   return (
     <div className="Product">
       <h1>{title}</h1>
-      <h3>Price : {price }</h3>
-      <h4>{feature}</h4>
-      <p>{feature2?.c}</p>
-      <p>{feature3}</p>
+      <h3>Price : {price}</h3>
+      {price > 100000 ? <p>Discount is 15%</p> : price > 50000 ? <p>Discount of 10% </p>: price > 30000  && price < 50000 ? <p>Discount of 5%</p> : null}
     </div>
-  );
+  )
+
+  //this is method 1
+  // if(price > 30000 && price < 50000){
+  //   return (
+  //   <div className="Product">
+  //     <h1>{title}</h1>
+  //     <h3>Price : {price}</h3>
+  //       <p>Discount of 5%</p>
+      
+  //   </div>
+  // );
+
+  // }else if(price > 50000){
+  //   return (
+  //   <div className="Product">
+  //     <h1>{title}</h1>
+  //     <h3>Price : {price}</h3>
+  //       <p>Discount of 10%</p>
+      
+  //   </div>
+  // );
+  // }
+  // else{
+  //   return (
+  //   <div className="Product">
+  //     <h1>{title}</h1>
+  //     <h3>Price : {price}</h3>
+      
+  //   </div>
+  // );
+  // }
 }
 
 export default Product;

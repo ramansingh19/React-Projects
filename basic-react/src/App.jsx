@@ -3,6 +3,8 @@ import Title from './Title.jsx'
 // import {Image} from './image.jsx'
 import ProductTab from './ProductTab.jsx';
 import Parent from '../Props/Parent.jsx';
+import Product from './Product.jsx';
+import PracticeTab from '../Rendering_Array/PracticeTab.jsx';
 
 
 function Description() {
@@ -17,11 +19,13 @@ function Description() {
 function App() {
   return (
     <>
-      <Title />
-      <Description />
-      {/* <Image/> */}
+      {/* <Title />
+      <Description /> */}
+      
+      
+      {/* <Parent/> */}
       <ProductTab/>
-      <Parent/>
+      {/* <PracticeTab/> */}
       
     </>
   );

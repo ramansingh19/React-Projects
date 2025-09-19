@@ -1,8 +1,10 @@
 .Product {
-  background-color: #212121;
+  background-color: #434040;
   color: #fff;
-  border: 2px solid black;
+  border: 2px solid rgb(227, 33, 33);
   border-radius: 1rem;
   margin-top: 20px;
   padding: 1rem;
+  width: 500px;
 }
+
