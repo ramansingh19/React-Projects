@@ -1,10 +1,21 @@
-.Product {
+/* .Product {
   background-color: #434040;
   color: #fff;
   border: 2px solid rgb(227, 33, 33);
   border-radius: 1rem;
   margin-top: 20px;
   padding: 1rem;
-  width: 500px;
+  width: 900px;
+} */
+.Amazon {
+  background-color: #fff;
+  color: #212121;
+  width: 200px;
+  height: 160px;
+  margin: 10px;
+  /* padding: 0 15px 0 15px; */
+  border: 2px solid black;
+  border-radius: 20px;
+  text-align: center;
+  
 }
-
