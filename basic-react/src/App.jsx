@@ -8,7 +8,7 @@ import PracticeTab from '../Rendering_Array/PracticeTab.jsx';
 import MsgBox from './msgBox.jsx';
 import AmazonProduct from './AmazonProduct.jsx';
 import Button from './button.jsx';
-
+import Form from './form.jsx';
 
 function Description() {
   return (
@@ -22,7 +22,8 @@ function Description() {
 function App() {
   return (
     <>
-    <Button/>
+    {/* <Button/> */}
+    <Form/>
       {/* <Title />
       <Description /> */}
       {/* <h3>Amazon Great Indian Sale | Live Now !</h3>
