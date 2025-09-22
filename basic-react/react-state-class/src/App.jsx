@@ -1,4 +1,5 @@
 import './App.css'
+import AuthPage from './AuthPage'
 import Counter from './Counter'
 import LikeButton from './LikeButton'
 import LikeButtons from './LikeButtons'
@@ -6,10 +7,11 @@ import LikeButtons from './LikeButtons'
 function App() {
   return (
     <>
-      <h1>State in React</h1>
-      {/* <Counter/> */}
+      
+      {/* { <Counter/> } */}
       {/* <LikeButton/> */}
-      <LikeButtons />
+      {/* <LikeButtons /> */}
+      <AuthPage /> 
     </>
   )
 }
