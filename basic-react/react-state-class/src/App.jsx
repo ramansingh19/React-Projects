@@ -11,7 +11,7 @@ function App() {
       {/* { <Counter/> } */}
       {/* <LikeButton/> */}
       {/* <LikeButtons /> */}
-      <AuthPage /> 
+      {/* { <AuthPage />  } */}
     </>
   )
 }
