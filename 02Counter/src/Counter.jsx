@@ -21,11 +21,24 @@ let [counter , setCounter ] = useState(0)
   //decrease the value
 
   const decCounter = () => {
-    setCounter((prev) => {
-      if (prev <= 0) return 0;   // stop at 0
-      return prev - 1;
-    });
-  };
+    setCounter(prevCounter => prevCounter - 1);
+    setCounter(prevCounter => prevCounter - 1);
+    setCounter(prevCounter => prevCounter - 1);
+    setCounter(prevCounter => prevCounter - 1);
+
+    //ek sath pss ek hii pass hota hai 
+    // setCounter(counter - 1);
+    // setCounter(counter - 1);
+    // setCounter(counter - 1);
+    return;
+  }
+
+  // const decCounter = () => {
+  //   setCounter((prev) => {
+  //     if (prev <= 0) return 0;   // stop at 0
+  //     return prev - 1;
+  //   });
+  // };
 
 
   // const decCounter = () => {

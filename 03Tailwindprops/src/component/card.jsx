@@ -1,6 +1,6 @@
 import React, { use } from 'react'
 
-export default function Card({username='Default name'}) {
+export default function Card({username='Nikita'}) {
     console.log(username);
     
   
