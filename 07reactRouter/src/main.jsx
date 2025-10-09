@@ -6,6 +6,15 @@ import Home from './Components/Home/Home.jsx'
 import About from './Components/About/About.jsx'
 import Layout from './layout.jsx'
 
+//use createBrowserRouter 
+// It is a function that creates a router instance for your React app.
+// Works similarly to <BrowserRouter>, but with advanced features like:
+// Nested routes with layouts
+// Loaders (data fetching before route renders)
+// Actions (handling form submissions)
+// Error boundaries per route
+
+
 const router = createBrowserRouter([
   {
     path : '/',
