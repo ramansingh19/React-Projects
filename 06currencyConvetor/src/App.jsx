@@ -16,7 +16,7 @@ function App() {
   //this is use to extract data from the object and key 
   const options = Object.keys(currencyInfo)
 
-  // this is use to swap the data
+  // This is use to swap the data
   //This swaps both currencies and their amounts, like a real converter.
   const swap = () => {
     setFrom(to)
