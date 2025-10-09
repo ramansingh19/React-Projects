@@ -17,19 +17,23 @@ function App() {
   const options = Object.keys(currencyInfo)
 
   // this is use to swap the data
+  //This swaps both currencies and their amounts, like a real converter.
   const swap = () => {
     setFrom(to)
     setTo(from)
-    setAmount(amount)
-    setConvertAmount(convertAmount)
-  }
+    setAmount(convertAmount)
+    setConvertAmount(amount)
+}
 
-  const convert = () => {
+const convert = () => {
      setConvertAmount(amount * currencyInfo[to])
-  }
+}
 
 
-  return (
+
+
+
+return (
         <div
             className="w-full h-screen flex  flex-wrap justify-center  items-center bg-cover bg-no-repeat"
             style={{
@@ -49,7 +53,9 @@ function App() {
                                 label="From"
                                 Amount={amount}
                                 currencyOption={options}
-                                onCurrencyChange={(currency) => setAmount(amount)}
+                                //it is changing  the currenecy not amount 
+                                // onCurrencyChange={(currency) => setAmount(amount)}
+                                onCurrencyChange={(currency) => setFrom(currency)}
                                 selectCurrency={from}
                                 onAmountChange={(amount ) => setAmount(amount)}
                                 
@@ -77,7 +83,7 @@ function App() {
                                 
                             />
                         </div>
-                        <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
+                        <button  type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg ">
                             Convert {String(from).toUpperCase()} to  {String(to).toUpperCase()}
                             
                         </button>
