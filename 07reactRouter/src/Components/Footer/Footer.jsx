@@ -36,7 +36,7 @@ export default function Footer() {
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
                                     <a
-                                        href="https://github.com/hiteshchoudhary"
+                                        href="https://github.com/ramansingh19"
                                         className="hover:underline"
                                         target="_blank"
                                         rel="noreferrer"
@@ -72,7 +72,7 @@ export default function Footer() {
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <span className="text-sm text-gray-500 sm:text-center">
                         © 2023
-                        <a href="https://hiteshchoudhary.com/" className="hover:underline">
+                        <a  className="hover:underline">
                             Ramankumar
                         </a>
                         . All Rights Reserved.

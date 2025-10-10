@@ -7,6 +7,7 @@ import About from './Components/About/About.jsx'
 import Layout from './layout.jsx'
 import Contact from './Components/Contact/Contact.jsx'
 import User from './Components/User/User.jsx'
+import Github, { gitubuserInfo } from './Components/Github/Github.jsx'
 
 //use createBrowserRouter 
 // It is a function that creates a router instance for your React app.
@@ -39,7 +40,9 @@ import User from './Components/User/User.jsx'
 //   }
 // ])
 
+
 //Method 2 for rendering
+//userid is use to get data dynamically
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element= {<Layout />}>
@@ -47,13 +50,12 @@ const router = createBrowserRouter(
         <Route path='/about' element= {<About />}/>
         <Route path='/contact' element= {<Contact />}/>
         <Route path='/user/:userid' element= {<User />}/>
+        <Route loader= {gitubuserInfo} path='/github' element= {<Github />}/>
+        
         
     </Route>
   )
 )
-
-
-
 
 
 
