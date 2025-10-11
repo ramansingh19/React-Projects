@@ -73,7 +73,7 @@ export default function Footer() {
                     <span className="text-sm text-gray-500 sm:text-center">
                         © 2023
                         <a  className="hover:underline">
-                            Ramankumar
+                            Raman kumar
                         </a>
                         . All Rights Reserved.
                     </span>

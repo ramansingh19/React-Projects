@@ -9,6 +9,7 @@ import Contact from './Components/Contact/Contact.jsx'
 import User from './Components/User/User.jsx'
 import Github, { gitubuserInfo } from './Components/Github/Github.jsx'
 
+
 //use createBrowserRouter 
 // It is a function that creates a router instance for your React app.
 // Works similarly to <BrowserRouter>, but with advanced features like:
@@ -51,6 +52,7 @@ const router = createBrowserRouter(
         <Route path='/contact' element= {<Contact />}/>
         <Route path='/user/:userid' element= {<User />}/>
         <Route loader= {gitubuserInfo} path='/github' element= {<Github />}/>
+        
         
         
     </Route>
