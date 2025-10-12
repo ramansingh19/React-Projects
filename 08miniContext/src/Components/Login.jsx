@@ -16,7 +16,7 @@ function Login() {
 
   return (
     <div>
-      <h2 className='text-white p-4 text-2xl font-extrabold '>Login</h2>
+      <h2 className='text-white p-4 text-2xl font-extrabold  '>Login</h2>
       <input 
       type="text" 
       placeholder ='Enter your name' className='text-white p-5 border-2 '
