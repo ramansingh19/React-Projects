@@ -4,8 +4,8 @@ const initialState = {
   todos : [{
     id : 1,
     text : 'Raman ',
-    completed : false,
-  }] 
+    
+  }]
 }
 
 export const todoSlice = createSlice({
@@ -16,7 +16,7 @@ export const todoSlice = createSlice({
       const todoNew = {
         id : nanoid(),
         text : action.payload,  // or action.payload.text if you send an object ,, the data you send along with an action.
-        completed : false
+        
       }
       state.todos.push(todoNew);
       
@@ -29,20 +29,20 @@ export const todoSlice = createSlice({
       state.todos = state.todos.filter((todo) => todo.id !== action.payload )
     },
 
-    updateTodo : (state , action) => {
-      const {id , newtext} = action.payload //this has a access of text 
-      const todo = state.todos.find(todo => todo.id === id) // case true 4
-      if (todo) {
-        todo.text = newtext //updated text print
-      }
-    },
+//     updateTodo : (state , action) => {
+//       const {id , newtext} = action.payload //this has a access of text 
+//       const todo = state.todos.find(todo => todo.id === id) // case true 4
+//       if (todo) {
+//         todo.text = newtext //updated text print
+//       }
+//     },
 
-    toggleTodo : (state , action) => {
-        const todo = state.todos.find(todo => todo.id === action.payload)
-        if(todo){
-          todo.completed =  !todo.completed
-        }
-    }
+  //   toggleTodo : (state , action) => {
+  //       const todo = state.todos.find(todo => todo.id === action.payload)
+  //       if(todo){
+  //         todo.completed =  !todo.completed
+  //       }
+  //   }
   }
 })
 
