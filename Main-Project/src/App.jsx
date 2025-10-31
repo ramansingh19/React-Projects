@@ -8,7 +8,6 @@ function App() {
   return (
     <>
     <h1>app using appwrite </h1>
-    
     </>
   )
 }
