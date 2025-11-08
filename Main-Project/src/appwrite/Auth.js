@@ -40,7 +40,7 @@ export class AuthService{
       }
     }
 
-    //get acount
+    //get account
     async getCurrentUser() {
       try {
         return await this.account.get()

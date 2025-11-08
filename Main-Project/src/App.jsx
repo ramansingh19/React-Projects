@@ -7,7 +7,7 @@ function App() {
   
   return (
     <>
-    <h1>app using appwrite </h1>
+    <h1>About the Appwrite appwrite </h1>
     </>
   )
 }
