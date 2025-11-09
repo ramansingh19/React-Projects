@@ -1,9 +1,8 @@
-
 import conf from "../conf/conf";
 
 import { Client, Account, ID } from "appwrite";
 
-//creating account 
+//creating account
 export class AuthService{
     client = new Client();
     account;
@@ -11,7 +10,7 @@ export class AuthService{
     constructor() {
       this.client
               .setEndpoint(conf.appwrite)
-              setProject(conf.appwriteProjectID)
+              .setProject(conf.appwriteProjectID)
               this.account = new Account(this.client)
     }
 
@@ -64,6 +63,11 @@ export class AuthService{
 const authservice = new AuthService();
 
 export default AuthService;
+
+
+
+
+
 
 //this code came from the appwrite site 
 // const client = new Client()
