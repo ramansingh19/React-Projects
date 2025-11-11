@@ -42,9 +42,16 @@ export class AuthService{
     //get account
     async getCurrentUser() {
       try {
-        return await this.account.get()
+        await this.account.getSession('current');
+        const user = await this.account.get()
+        return user;
       } catch (error) {
-        throw error;
+        if (error.code == 401) {
+          console.warn("no active sesion is found ")
+          return null
+        }
+        console.error("error fetching current account", error)
+        return null;
       }
     }
 
@@ -62,7 +69,7 @@ export class AuthService{
 //for Object
 const authservice = new AuthService();
 
-export default AuthService;
+export default authservice;
 
 
 
