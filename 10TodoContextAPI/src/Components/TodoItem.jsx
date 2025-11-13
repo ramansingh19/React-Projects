@@ -8,13 +8,13 @@ function TodoItem({ todo }) {
 
     //this is use for edit in our todo list 
     const editTodo = () => {
-      updateTodo(todo.id , {...todo , todo : todoMsg})
-      setIsTodoEditable(false)
+        updateTodo(todo.id , {...todo , todo : todoMsg})
+        setIsTodoEditable(false)
     }
 
     //this is use to toogle the todo
     const toggleCompleted = () => {
-      toggleTodo(todo.id)
+        toggleTodo(todo.id)
     }
 
     return (
