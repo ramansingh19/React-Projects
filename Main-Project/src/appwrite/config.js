@@ -129,8 +129,23 @@ export class Service {
       return false;
     }
   }
+
+
+  //file preview
+  async getFilePreview(fileID){
+      try{
+        await this.bucket.getFilePreview(
+            conf.appwriteBucketID,
+            fileID
+        )
+      }catch{
+          console.log("Appwrite serive :: PreviewFile :: error" , error);
+          
+      }
+    }
 }
 
+    
 
 const service = new Service();
 export default service;
