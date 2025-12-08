@@ -1,96 +1,63 @@
-import conf from "../conf/conf";
-
+import conf from '../conf/conf.js';
 import { Client, Account, ID } from "appwrite";
 
-//creating account
-export class AuthService{
+
+export class AuthService {
     client = new Client();
     account;
 
     constructor() {
-      this.client
-              .setEndpoint(conf.appwrite)
-              .setProject(conf.appwriteProjectID)
-              this.account = new Account(this.client)
+        this.client
+            .setEndpoint(conf.appwriteUrl)
+            .setProject(conf.appwriteProjectId);
+        this.account = new Account(this.client);
+            
     }
 
-    //signUp
-    async createAccount({email , password , name}) {
-      try {
-        const user = await this.account.create(ID.unique() , email, password , name);
-              if (user) {
-                //call another method --> the another method is redrict use to the login page ;
-                    return this.login({email , password})
-              } else {
-                return user
-              }
-      } catch (error) {
-        throw error;
-      }
-    }
-
-    //login 
-    async login({email , password}) {
-      try {
-        const userinfo = await this.account.createEmailPasswordSession({email , password})
-        return userinfo;
-      } catch (error) {
-        throw error
-      }
-    }
-
-    //get account
-    async getCurrentUser() {
-      try {
-        await this.account.getSession('current');
-        const user = await this.account.get()
-        return user;
-      } catch (error) {
-        if (error.code == 401) {
-          console.warn("no active sesion is found ")
-          return null
+    async createAccount({email, password, name}) {
+        try {
+            const userAccount = await this.account.create(ID.unique(), email, password, name);
+            if (userAccount) {
+                // call another method
+                return this.login({email, password});
+            } else {
+               return  userAccount;
+            }
+        } catch (error) {
+            throw error;
         }
-        console.error("error fetching current account", error)
-        return null;
-      }
     }
 
-    //logout
+    async login({email, password}) {
+        try {
+            return await this.account.createEmailSession(email, password);
+        } catch (error) {
+            throw error;
+        }
+    }
+
+    async getCurrentUser() {
+        try {
+            return await this.account.get();
+        } catch (error) {
+            console.log("Appwrite serive :: getCurrentUser :: error", error);
+        }
+
+        return null;
+    }
+
     async logout() {
-      try {
-        await this.account.deleteSessions();//we can also use deletesession but we have to put 'current '
-      } catch (error) {
-        throw error;
-      }
-      return null;
+
+        try {
+            await this.account.deleteSessions();
+        } catch (error) {
+            console.log("Appwrite serive :: logout :: error", error);
+        }
     }
 }
 
-//for Object
-const authservice = new AuthService();
+const authService = new AuthService();
 
-export default authservice;
+export default authService
 
-
-
-
-
-
-//this code came from the appwrite site 
-// const client = new Client()
-//     .setProject('<PROJECT_ID>')
-//     .setEndpoint('https://<REGION>.cloud.appwrite.io/v1');
-
-// const account = new Account(client);
-
-// try {
-//     const user = await account.create({
-//         userId: '[USER_ID]',
-//         email: 'email@example.com',
-//         password: '<Password>'
-//     });
-//     console.log(user)
-// } catch (e){
-//     console.error(e)
-// }
 

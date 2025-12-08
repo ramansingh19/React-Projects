@@ -1,13 +1,13 @@
 import React from 'react'
 import { useState , useEffect } from 'react'
-import { Container , Postcard } from '../Components'
+import { Container , Postcard } from '../components'
 import appwriteService from '../appwrite/config'
 
 function HomePage() {
   const [posts , setPosts] = useState([])
 
   useEffect(() => {
-    if (post) {
+    if (posts) {  
       appwriteService.getposts().then((posts) => {
         if (posts) {
           setPosts(posts)
