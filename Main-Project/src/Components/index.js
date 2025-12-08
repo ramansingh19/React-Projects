@@ -13,9 +13,7 @@ import Select from './Select';
 import Signup from './Signup';
 import Container from "./container/Container";
 
-
-
-export default {
+export {
   Authlayout,
   Button,
   Container,
