@@ -1,10 +1,10 @@
 import React  from 'react'
 import { useState } from 'react'
 import { Link , useNavigate } from 'react-router-dom'
-import {Button , input, Logo } from './index'
+import {Button , Input, Logo } from './index'
 import { login as authLogin } from '../Store/slicestore'
 import { useDispatch } from 'react-redux'
-import authservice, { AuthService } from '../appwrite/Auth'
+import authservice from '../appwrite/Auth'
 import {useForm} from "react-hook-form"
 
 function Login() {

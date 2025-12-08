@@ -1,10 +1,10 @@
-import authservice from './appwrite/Auth';
-import {useDispatch} from 'react-redux'
 import { useEffect, useState } from 'react';
-import {login , logout} from './Store/slicestore'
-import './App.css'
-import Header from './Components/Header/header';
-import Footer from './Components/Footer/footer';
+import { useDispatch } from 'react-redux';
+import './App.css';
+import authservice from './appwrite/Auth';
+import Footer from './Components';
+import { Header } from './Components';
+import { login, logout } from './Store/slicestore';
 
 function App() {
   const [loading , setLoading] = useState(true)
