@@ -30,9 +30,8 @@ export class AuthService {
 
     async login({email, password}) {
         try {
-            
-            return await this.account.createSession(email , password);
-            
+            //this is main point you have to use createEmailSession this is new version drama , 
+            return await this.account.createEmailSession(email, password);
             
         } catch (error) {
             throw error;

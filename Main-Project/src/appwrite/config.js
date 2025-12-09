@@ -22,7 +22,7 @@ export class Service{
                 slug,
                 {
                     title,
-                    content,
+                    body : content,
                     featuredImage,
                     status,
                     userId,
@@ -41,7 +41,7 @@ export class Service{
                 slug,
                 {
                     title,
-                    content,
+                    body : content,
                     featuredImage,
                     status,
 
