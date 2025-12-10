@@ -9,7 +9,7 @@ export default function PostForm({ post }) {
     const { register, handleSubmit, watch, setValue, control, getValues } = useForm({
         defaultValues: {
             title: post?.title || "",
-            slug: post?.$id || "",
+            slug: post?.$slug || "",
             content: post?.content || "",
             status: post?.status || "active",
         },
@@ -25,6 +25,7 @@ export default function PostForm({ post }) {
         return alert("Please login first");
     }
         if (post) {
+            console.log(post);
             const file = data.image[0] ? await appwriteService.uploadFile(data.image[0]) : null;
             if (file) {
                 appwriteService.deleteFile(post.featureImage);
@@ -44,7 +45,11 @@ export default function PostForm({ post }) {
                 const fileId = file.$id;
                 data.featureImage = fileId;
                 
-                const dbPost = await appwriteService.createPost({ ...data, userId: userData.$id });
+                const dbPost = await appwriteService.createPost({ 
+        ...data, 
+        authorId: userData.$id   // THIS IS THE FIX
+});
+
                 if (dbPost) {
                     navigate(`/post/${dbPost.$id}`);
                 }

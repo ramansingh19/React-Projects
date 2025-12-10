@@ -35,7 +35,7 @@ export class Service{
         }
     }
 
-    async updatePost(slug, {title, content, featureImage, status}){
+    async updatePost(slug, {title, content, featureImage, status , authorId}){
         try {
             return await this.databases.updateDocument(
                 conf.appwriteDatabaseId,
@@ -47,6 +47,7 @@ export class Service{
                     body: content, // keep Appwrite schema requirement satisfied
                     featureImage,
                     status,
+                    authorId
 
                 }
             )
