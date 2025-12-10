@@ -1,7 +1,7 @@
 import React from 'react'
 import { useCallback } from 'react'
 import { useForm } from 'react-hook-form'
-import {Button , Input , Select, RTE} from '../index'
+import {Button , Input , Select, RTE} from  '../index'
 import appwriteService from '../../appwrite/config'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
@@ -28,11 +28,11 @@ function Postfrom({post}) {
     if (post) {
       const file = data.image[0] ? await appwriteService.uploadfile(data.image[0]) : null
       if (file) {
-        await appwriteService.deletefile(post.featuredImage)
+        await appwriteService.deletefile(post.featureImage)
       }
       const dbPost = await appwriteService.updatepost(post.$id , {
         ...data,
-        featuredImage : file ? file.$id : undefined,
+        featureImage : file ? file.$id : undefined,
       })
         if (dbPost) {
           navigate(`/post/${post.$id}`)
@@ -49,7 +49,7 @@ function Postfrom({post}) {
 
       const dbPost = await appwriteService.createpost({
       ...data,
-      featuredImage: fileId,
+      featureImage: fileId,
       userID: userData.$id,
       });
     }
@@ -110,7 +110,7 @@ function Postfrom({post}) {
                 {post && (
                     <div className="w-full mb-4">
                         <img
-                            src={appwriteService.getFilePreview(post.featuredImage)}
+                            src={appwriteService.getFilePreview(post.featureImage)}
                             alt={post.title}
                             className="rounded-lg"
                         />

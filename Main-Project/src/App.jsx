@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import './App.css'
-import authService from "./appwrite/auth"
-import {login, logout} from "./Store/authSlice"
-import { Footer, Header } from './components'
 import { Outlet } from 'react-router-dom'
+import './App.css'
+import { ping } from './appwrite/appwrite'
+import authService from "./appwrite/auth"
+import { Footer, Header } from './components'
+import { login, logout } from './store/authSlice'
 
 function App() {
   const [loading, setLoading] = useState(true)
   const dispatch = useDispatch()
 
   useEffect(() => {
+    ping().catch((err) => console.error("Appwrite health check failed", err))
     authService.getCurrentUser()
     .then((userData) => {
       if (userData) {
