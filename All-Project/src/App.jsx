@@ -12,9 +12,10 @@ import Layout from './reactRouter/Layout.jsx';
 import Contact from './reactRouter/Contact/Contact.jsx';
 import User from './reactRouter/User/User.jsx';
 import Github, { githubuserInfo } from './reactRouter/Github/Github.jsx';
+import Todo from './Todo/todo.jsx';
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   // Define router inside App
   const router = createBrowserRouter(
@@ -36,9 +37,10 @@ function App() {
       <Bgchanger />
       <Passwordchanger />
       <CurrencyConvetor />
-
+      <Todo />
       {/* RouterProvider will handle all routes */}
       <RouterProvider router={router} />
+      
     </>
   );
 }
