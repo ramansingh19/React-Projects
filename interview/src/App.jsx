@@ -8,6 +8,7 @@ import Practice02 from './components/Practice02'
 import SyntheticEvent from './components/syntheticEvent'
 import UncontrolledCom from './components/UncontrolledCom'
 import Map from './components/map'
+import Callback from './components/Callback'
 
 function App() {
   
@@ -15,6 +16,7 @@ function App() {
     
     <>
     <Map />
+    <Callback />
     <SyntheticEvent/>
     {/* <Practice02 />
     <Practice01 />
