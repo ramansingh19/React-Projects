@@ -9,12 +9,14 @@ import SyntheticEvent from './components/syntheticEvent'
 import UncontrolledCom from './components/UncontrolledCom'
 import Map from './components/map'
 import Callback from './components/Callback'
+import Memo from './components/Memo'
 
 function App() {
   
   return (
     
     <>
+    <Memo />
     <Map />
     <Callback />
     <SyntheticEvent/>

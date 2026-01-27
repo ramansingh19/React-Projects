@@ -13,3 +13,5 @@ function Callback() {
 }
 
 export default Callback
+
+//useCallback is a React Hook that memoizes a function, so React does not recreate that function on every render unless its dependencies change.
