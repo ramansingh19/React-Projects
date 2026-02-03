@@ -13,6 +13,9 @@ import Memo from './components/Memo'
 import State from './components/State'
 import Effect from './components/Effect'
 import Ref from "./components/ref";
+import { Home } from "./components/ContextApi/Home";
+import { ThemeProvider } from "./components/ContextApi";
+import { About } from "./components/ContextApi/About";
 
 function App() {
   
@@ -30,6 +33,8 @@ function App() {
       <Route path="/Uncontrolled" element={<UncontrolledCom />} />
       <Route path="/Forwardref" element={<Forwardref />} />
       <Route path="/ref" element={<Ref />} />
+      <Route path="/context" element={<ThemeProvider><Home/><About/></ThemeProvider>} />
+      
     </Routes>
     
     
