@@ -12,6 +12,7 @@ import Callback from './components/Callback'
 import Memo from './components/Memo'
 import State from './components/State'
 import Effect from './components/Effect'
+import Ref from "./components/ref";
 
 function App() {
   
@@ -28,6 +29,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/Uncontrolled" element={<UncontrolledCom />} />
       <Route path="/Forwardref" element={<Forwardref />} />
+      <Route path="/ref" element={<Ref />} />
     </Routes>
     
     
