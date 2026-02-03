@@ -1,5 +1,3 @@
-
-
 import './App.css'
 import { Login } from './components/ControlComponent'
 import Forwardref from './components/Forwardref'
@@ -10,16 +8,18 @@ import UncontrolledCom from './components/UncontrolledCom'
 import Map from './components/map'
 import Callback from './components/Callback'
 import Memo from './components/Memo'
+import State from './components/State'
 
 function App() {
   
   return (
     
     <>
-    <Memo />
-    <Map />
-    <Callback />
-    <SyntheticEvent/>
+    <State />
+    {/* <Memo /> */}
+    {/* <Map /> */}
+    {/* <Callback /> */}
+    {/* <SyntheticEvent/> */}
     {/* <Practice02 />
     <Practice01 />
     <Login />
